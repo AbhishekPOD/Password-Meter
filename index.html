@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id = "app">
+        
+        <h2>Password Strength Meter</h2>
+
+        <p>Enter the Password:</p>
+        <input v-model = "pass" type="text" />
+
+        <br><br>
+
+        <label v-bind:style = "{ 'background-color' : track.lowercase }">At least 1 lower case character</label>
+
+        <br>
+
+        <label v-bind:style = "{ 'background-color' : track.uppercase }">At least 1 upper case character</label>
+
+        <br>
+
+        <label v-bind:style = "{ 'background-color' : track.digit }">At least 1 number character</label>
+
+        <br>
+
+        <label v-bind:style = "{ 'background-color' : track.special }">At least 1 special character</label>
+        <br>
+
+        <label v-bind:style = "{ 'background-color' : track.len }">At least 8 chacters</label>
+
+        <p>Password Strength : {{ strength }}%</p>
+
+    </div>
+
+</body>
+<script src = "script.js"></script>
+</html>
